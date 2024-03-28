@@ -1,0 +1,158 @@
+.main {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  padding: 0 10vw;
+  background-color: #d7cec7;
+  height: 0;
+  position: absolute;
+  top: 0;
+  transition: 0.5s height;
+}
+
+.nav {
+  position: absolute;
+  top: 0;
+  padding: 4rem 5rem 4rem 5rem;
+  width: calc(100% - 20vw);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.button {
+  background-color: transparent;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  color: #76323f;
+  transition: 0.5s color;
+  font-family: "Edu NSW ACT Foundation", cursive;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 3rem;
+}
+
+.navburgercontainer {
+  content: "";
+  width: 55px;
+  height: 25px;
+  position: relative;
+  right: 0;
+  cursor: pointer;
+}
+
+.navburger {
+  content: "";
+  width: 55px;
+  height: 25px;
+  position: relative;
+  right: 0;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.navburgermenu {
+  content: "";
+  background: #323232;
+  position: absolute;
+  width: 55px;
+  height: 4px;
+  z-index: 0;
+  top: calc(25px / 2 - 1.5px);
+  transition: 0.25s width ease-in-out, 0.5s background-color ease-in-out;
+}
+
+.navburgermenu::after {
+  content: "";
+  background: #323232;
+  position: absolute;
+  width: 55px;
+  height: 4px;
+  transform: translateY(10px);
+  z-index: 0;
+  transition: 0.25s transform ease-in-out, 0.5s background-color ease-in-out;
+}
+
+.navburgermenu::before {
+  content: "";
+  background: #323232;
+  position: absolute;
+  width: 55px;
+  height: 4px;
+  transform: translateY(-10px);
+  z-index: 0;
+  transition: 0.25s transform ease-in-out, 0.5s background-color ease-in-out;
+}
+
+.navburger:hover ~ .navburgermenu {
+  width: 35px;
+}
+
+.menu {
+  position: absolute;
+  top: 30vh;
+  display: none;
+  font-family: "Edu NSW ACT Foundation", cursive;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  padding: 1rem 0 0 5rem;
+}
+
+a {
+  font-size: 3rem;
+  color: #ffffff;
+  transition: 0.25 color;
+}
+
+a:hover {
+  color: #ffffff;
+  transition: 0.25s color;
+}
+
+.main.active {
+  background-color: #7a7a7a;
+  transition: 0.75s height;
+  height: 100vh;
+}
+
+.main.active .button {
+  color: #ffffff;
+  transition: 0.5s color;
+}
+
+.main.active .navburgermenu {
+  width: 0;
+  background-color: #ffffff;
+  transition: 0.25s width ease-in-out, 0.25s background-color ease-in-out;
+}
+
+.main.active .navburgermenu::after {
+  transform: translateY(0px) rotate(135deg);
+  background-color: #ffffff;
+  transition: 0.25s transform ease-in-out, 0.25s background-color ease-in-out;
+}
+
+.main.active .navburgermenu::before {
+  transform: translateY(0px) rotate(-135deg);
+  background-color: #ffffff;
+  transition: 0.25s transform ease-in-out, 0.25s background-color ease-in-out;
+}
+
+.main.active .navburger:hover ~ .navburgermenu {
+  width: 0px;
+}
+
+.main.active .menu {
+  display: initial;
+}
