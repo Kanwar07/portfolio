@@ -18,7 +18,9 @@ function About() {
           <img
             src={aboutdata.avatar.url}
             alt={aboutdata.avatar.public_id}
-            style={{ borderRadius: "80px" }}
+            style={{
+              borderRadius: "80px",
+            }}
           />
         )}
       </motion.div>

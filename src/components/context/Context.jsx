@@ -5,6 +5,7 @@ export const data = createContext();
 
 function Contextdata({ children }) {
   const [aboutdata, setaboutdata] = useState({});
+  const [skilldata, setskilldata] = useState({});
   const [burgermenu, setburgermenu] = useState(false);
 
   useEffect(() => {
@@ -15,6 +16,7 @@ function Contextdata({ children }) {
         )
         .then(function (response) {
           setaboutdata(response.data.user.about);
+          setskilldata(response.data.user.skills);
         })
         .catch(function (error) {
           console.log(error);
@@ -24,7 +26,7 @@ function Contextdata({ children }) {
   }, []);
 
   return (
-    <data.Provider value={{ aboutdata, burgermenu, setburgermenu }}>
+    <data.Provider value={{ aboutdata, skilldata, burgermenu, setburgermenu }}>
       {children}
     </data.Provider>
   );
