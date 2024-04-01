@@ -59,7 +59,7 @@ function About() {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1.4, delay: 0.5 }}
           style={{
-            fontSize: "200px",
+            fontSize: "12.5vw",
             color: "rgb(0, 0, 0, 0.2)",
           }}
         >

@@ -9,7 +9,7 @@ function Skills() {
     <div className={skillsstyle.main}>
       <motion.div
         style={{
-          fontSize: "200px",
+          fontSize: "12.5vw",
           marginRight: "4rem",
           color: "rgb(0, 0, 0, 0.2)",
         }}
@@ -21,7 +21,7 @@ function Skills() {
         Skills
       </motion.div>
 
-      <div class="grid grid-cols-4 gap-2 w-[100%] pt-4 pb-4 max-sm:grid-cols-1 max-md:grid-cols-2 max-lg:grid-cols-2 max-xl:grid-cols-3">
+      <div className="grid grid-cols-4 gap-2 w-[100%] pt-4 pb-4 max-sm:grid-cols-1 max-md:grid-cols-2 max-lg:grid-cols-2 max-xl:grid-cols-3">
         {Array.isArray(skilldata) &&
           skilldata.length > 0 &&
           skilldata.map((skill) => {

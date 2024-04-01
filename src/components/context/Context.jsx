@@ -6,6 +6,11 @@ export const data = createContext();
 function Contextdata({ children }) {
   const [aboutdata, setaboutdata] = useState({});
   const [skilldata, setskilldata] = useState({});
+  const [projects, setprojects] = useState({});
+  const [services, setservices] = useState({});
+  const [testimonials, settestimonials] = useState({});
+  const [video, setvideo] = useState({});
+  const [socialhandles, setsocialhandles] = useState({});
   const [burgermenu, setburgermenu] = useState(false);
 
   useEffect(() => {
@@ -17,6 +22,12 @@ function Contextdata({ children }) {
         .then(function (response) {
           setaboutdata(response.data.user.about);
           setskilldata(response.data.user.skills);
+          setprojects(response.data.user.projects);
+          setservices(response.data.user.services);
+          setvideo(response.data.user.youtube);
+          settestimonials(response.data.user.testimonials);
+          setsocialhandles(response.data.user.social_handles);
+          console.log(response.data.user.youtube);
         })
         .catch(function (error) {
           console.log(error);
@@ -26,7 +37,19 @@ function Contextdata({ children }) {
   }, []);
 
   return (
-    <data.Provider value={{ aboutdata, skilldata, burgermenu, setburgermenu }}>
+    <data.Provider
+      value={{
+        aboutdata,
+        skilldata,
+        projects,
+        services,
+        video,
+        testimonials,
+        socialhandles,
+        burgermenu,
+        setburgermenu,
+      }}
+    >
       {children}
     </data.Provider>
   );
