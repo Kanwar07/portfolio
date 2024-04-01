@@ -56,7 +56,9 @@ function NavBar() {
               },
             }}
           >
-            <a href="/">Skills</a>
+            <a href="#Skills" key="Skills">
+              Skills
+            </a>
           </motion.li>
           <motion.li
             variants={{
@@ -68,7 +70,7 @@ function NavBar() {
               },
             }}
           >
-            <a href="/">Projects</a>
+            <a href="#Projects">Projects</a>
           </motion.li>
           <motion.li
             variants={{
@@ -80,7 +82,7 @@ function NavBar() {
               },
             }}
           >
-            <a href="/">Services</a>
+            <a href="#Services">Services</a>
           </motion.li>
           <motion.li
             variants={{
@@ -92,7 +94,7 @@ function NavBar() {
               },
             }}
           >
-            <a href="/">Testimonials</a>
+            <a href="#Testimonials">Testimonials</a>
           </motion.li>
         </motion.ul>
       </div>

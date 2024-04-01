@@ -14,11 +14,19 @@ function App() {
     <Contextdata>
       <NavBar />
       <About />
-      <Skills />
-      <Projects />
-      <Services />
+      <section id="Skills">
+        <Skills />
+      </section>
+      <section id="Projects">
+        <Projects />
+      </section>
+      <section id="Services">
+        <Services />
+      </section>
       <Videofile />
-      <Testimonials />
+      <section id="Testimonials">
+        <Testimonials />
+      </section>
       <Footer />
     </Contextdata>
   );
