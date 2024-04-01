@@ -9,13 +9,10 @@
 .image {
   border-radius: 25px;
   height: 100vh;
-  width: 45vw;
-  padding: 10rem;
+  padding: 4rem 10rem;
 }
 
 .info {
-  margin: 6rem 6rem 0 0;
-  width: 50%;
   text-align: left;
   font-family: "Edu NSW ACT Foundation", cursive;
   font-optical-sizing: auto;

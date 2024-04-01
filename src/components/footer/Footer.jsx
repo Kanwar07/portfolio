@@ -7,10 +7,38 @@ function Footer() {
   return (
     <div className={footerstyle.main}>
       <div>
-        <div className="pt-4 pb-4 text-[24px] cursor-pointer">Skills</div>
-        <div className="pt-4 pb-4 text-[24px] cursor-pointer">Projects</div>
-        <div className="pt-4 pb-4 text-[24px] cursor-pointer">Services</div>
-        <div className="pt-4 pb-4 text-[24px] cursor-pointer">Testimonials</div>
+        <div className="pt-4 pb-4">
+          <a
+            href="#Skills"
+            className="text-[24px] cursor-pointer text-[#000000] hover:text-[#ffffff]"
+          >
+            Skills
+          </a>
+        </div>
+        <div className="pt-4 pb-4">
+          <a
+            href="#Projects"
+            className="text-[24px] cursor-pointer text-[#000000] hover:text-[#ffffff]"
+          >
+            Projects
+          </a>
+        </div>
+        <div className="pt-4 pb-4">
+          <a
+            href="#Services"
+            className="text-[24px] cursor-pointer text-[#000000] hover:text-[#ffffff]"
+          >
+            Services
+          </a>
+        </div>
+        <div className="pt-4 pb-4">
+          <a
+            href="#Testimonials"
+            className="text-[24px] cursor-pointer text-[#000000] hover:text-[#ffffff]"
+          >
+            Testimonials
+          </a>
+        </div>
       </div>
       <div className="flex flex-row">
         {socialhandles.length > 0 &&

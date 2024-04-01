@@ -5,9 +5,11 @@
   align-items: center;
   background-color: #ddd0c8;
   padding: 4rem 10rem;
+  position: relative;
 }
 
 .text {
+  position: absolute;
   font-family: "Edu NSW ACT Foundation", cursive;
   font-optical-sizing: auto;
   font-weight: 400;

@@ -1,21 +1,25 @@
+.mainnav {
+  width: 100%;
+  height: 20vh;
+  background-color: #ddd0c8;
+}
+
 .main {
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
-  width: 100%;
-  padding: 0 10vw;
   background-color: #d7cec7;
   height: 0;
-  position: absolute;
+  position: relative;
   top: 0;
   transition: 0.5s height;
 }
 
 .nav {
   position: absolute;
+  padding: 4rem 10rem;
   top: 0;
-  padding: 4rem 5rem 4rem 5rem;
-  width: calc(100% - 20vw);
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -106,7 +110,7 @@ ul {
 }
 
 li {
-  padding: 1rem 0 0 5rem;
+  padding: 1rem 0 0 12.5rem;
 }
 
 a {
@@ -115,8 +119,8 @@ a {
   transition: 0.25 color;
 }
 
-a:hover {
-  color: #ffffff;
+.main.active a:hover {
+  color: #ddd0c8;
   transition: 0.25s color;
 }
 
@@ -128,6 +132,11 @@ a:hover {
 
 .main.active .button {
   color: #ffffff;
+  transition: 0.5s color;
+}
+
+.main.active .button:hover {
+  color: #ddd0c8;
   transition: 0.5s color;
 }
 
