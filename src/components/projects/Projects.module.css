@@ -1,10 +1,8 @@
 .main {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   background-color: #ddd0c8;
-  padding: 4rem 10rem;
+  padding: 2rem 10rem;
   position: relative;
 }
 
@@ -15,4 +13,25 @@
   font-weight: 400;
   font-style: normal;
   color: #323232;
+}
+
+.carousel {
+  padding-top: 6rem;
+  cursor: grab;
+  z-index: 1;
+}
+
+.innercarousel {
+  display: flex;
+}
+
+.item {
+  min-height: 30rem;
+  min-width: 30rem;
+  padding: 40px;
+}
+
+.item img {
+  pointer-events: none;
+  border-radius: 25px;
 }
