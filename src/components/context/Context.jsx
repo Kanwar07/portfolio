@@ -27,7 +27,6 @@ function Contextdata({ children }) {
           setvideo(response.data.user.youtube);
           settestimonials(response.data.user.testimonials);
           setsocialhandles(response.data.user.social_handles);
-          console.log(response.data.user.youtube);
         })
         .catch(function (error) {
           console.log(error);

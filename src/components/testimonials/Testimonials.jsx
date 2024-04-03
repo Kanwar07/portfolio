@@ -2,27 +2,34 @@ import React, { useContext } from "react";
 import { data } from "../context/Context";
 import testimonialsstyle from "./Testimonials.module.css";
 import { motion } from "framer-motion";
+import TestimonialsCard from "../card/TestimonialsCard";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 function Testimonials() {
   const { testimonials } = useContext(data);
 
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  };
+
   return (
-    <div className={testimonialsstyle.main}>
-      <div className="grid grid-cols-4 gap-2 w-[100%] pt-4 pb-4 z-10 max-sm:grid-cols-1 max-md:grid-cols-2 max-lg:grid-cols-2 max-xl:grid-cols-3">
-        {testimonials.length > 0 &&
-          testimonials.map((project) => {
-            const { name, _id, image } = project;
-            return (
-              <div key={_id} className="flex flex-col items-center p-4">
-                <img
-                  src={image.url}
-                  alt={image.public_id}
-                  className="size-60 mb-6"
-                />
-                <div>{name}</div>
-              </div>
-            );
-          })}
+    <div className="relative w-screen m-auto bg-[#ddd0c8] pt-16 pr-48 pb-16 pl-48">
+      <div className="pt-20">
+        <Slider {...settings}>
+          {testimonials.length > 0 &&
+            testimonials.map((project) => {
+              const { name, _id, image, position, review } = project;
+              return (
+                <TestimonialsCard {...{ name, _id, image, position, review }} />
+              );
+            })}
+        </Slider>
       </div>
       <motion.div
         className={testimonialsstyle.text}

@@ -9,7 +9,19 @@ function Projects() {
   return (
     <div className={projectstyle.main}>
       <motion.div className={projectstyle.carousel}>
-        <motion.div drag="x" className={projectstyle.innercarousel}>
+        <motion.div
+          drag="x"
+          dragConstraints={{ right: 500, left: -6350 }}
+          initial={{ x: 100 }}
+          animate={{ x: "-500%" }}
+          transition={{
+            duration: 40,
+            repeat: Infinity,
+            repeatType: "loop",
+            delay: 1.2,
+          }}
+          className={projectstyle.innercarousel}
+        >
           {projects.length > 0 &&
             projects.map((project) => {
               const { title, _id, image } = project;
@@ -17,12 +29,9 @@ function Projects() {
                 <motion.div
                   key={_id}
                   className={projectstyle.item}
-                  initial={{ x: 0 }}
-                  animate={{ x: "-1525%" }}
-                  transition={{
-                    duration: 55,
-                    repeat: Infinity,
-                    repeatType: "loop",
+                  whileHover={{
+                    scale: 1.2,
+                    transition: { duration: 1 },
                   }}
                 >
                   <img src={image.url} alt={title} />
